@@ -1,0 +1,12 @@
+@mixin active($value){
+  color: $blanc;
+  text-decoration: none;
+  background-color: transparent;
+  padding-bottom: $value;
+  border-bottom: $border-gris;
+}
+
+@mixin icon($value){
+  padding-left: $value;
+  vertical-align: middle;
+}

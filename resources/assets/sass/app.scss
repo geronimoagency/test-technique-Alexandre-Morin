@@ -1,0 +1,274 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+@import "fonts";
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Style
+
+/* scrollup */
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  background: url(../../imgs/top.png);
+}
+
+/***********
+    MENU
+***********/
+.navbar {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-inverse {
+  background-color: $noir;
+  border: none;
+  font-size: 1.5rem;
+
+  .navbar-brand {
+    padding-left: 60px;
+  }
+
+  .navbar-nav {
+    padding-left: 25%;
+
+    > li {
+      a {
+        color: $blanc;
+        margin: 0 5px;
+
+        &:focus, &:hover {
+          @include active(10px);
+        }
+      }
+      &.active > a {
+        @include active(10px);
+
+        &:focus, &:hover {
+          @include active(10px);
+        }
+      }
+    }
+  }
+
+  .navbar-right {
+    padding: {
+      left: 0;
+      right: 5%;
+    }
+    >li {
+      a {
+        &:focus, &:hover {
+          border: none;
+          padding-bottom: 17px;
+        }
+        .icon {
+          @include icon(5px);
+        }
+      }
+    }
+  }
+
+  .navbar-collapse {
+    border: none;
+    box-shadow: none;
+  }
+
+}
+
+/***********
+    INDEX
+***********/
+.btn{
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+header {
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+    -moz-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+    color: $blanc;
+  }
+}
+
+section {
+  margin: 40px auto;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  figure {
+    padding: 20px 0 30px;
+
+    figcaption {
+      margin: auto;
+
+      h3 {
+        @extend %title;
+      }
+
+      p {
+        @extend %description;
+      }
+
+      ul {
+        padding-left: 0;
+        li {
+
+          display: inline-block;
+          font-family: "Roboto";
+          font-weight: 500;
+          font-size: 1.7rem;
+          opacity: 0.4;
+          margin-right: 20px;
+
+          .icon {
+            @include icon(10px);
+          }
+
+          &[data-toggle="modal"] {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-load {
+    @extend %btn-load;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+  }
+}
+
+.modal-content{
+  padding: 30px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-color: $noir;
+
+  .modal-header {
+    border-bottom: $border-gris;
+    h3{
+      @extend %title;
+    }
+    p{
+      @extend %description;
+    }
+  }
+
+  .modal-body {
+    h4 {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .form-horizontal {
+      .control-label{
+        padding:{
+          top: 0;
+          right: 0;
+        }
+        text-align: left;
+      }
+
+      .form-control{
+        font-family: "Roboto";
+        font-size: 2rem;
+        font-style: italic;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+      }
+
+      .btn-send{
+        background-color: $noir;
+        color: $blanc;
+        font-size: 1.6rem;
+        font-weight: 700;
+        width: 200px;
+        height: 40px;
+        margin-right: 15px;
+      }
+    }
+
+    article{
+      margin-bottom: 30px;
+
+      h5 {
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+      }
+
+      p{
+        font-family: "Roboto";
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 5px;
+
+        &.date{
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .btn-load {
+    @extend %btn-load;
+    font-size: 1.6rem;
+  }
+}
+
+/************
+    FOOTER
+************/
+.nav-footer {
+  border: $border-gris;
+  border-radius: 0;
+  min-height: 40px;
+
+  ul{
+    padding-left: 0;
+    li {
+      display: inline-block;
+      padding: 10px 40px;
+      line-height: 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
