@@ -1,6 +1,7 @@
 @extends('layout.master')
 
 @section('content')
+
     <div class="row">
         <header>
             <img src="{{ url('imgs/header.jpg') }}" srcset="{{url('imgs/header@2x.jpg 2x,imgs/header@3x.jpg 3x')}}">

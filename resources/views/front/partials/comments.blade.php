@@ -19,7 +19,7 @@
 
                     <h4>Commentaires (<span></span>)</h4>
                     <form action="addComment" method="post" class="form-horizontal" id="commentsForm">
-                        {{csrf_field()}}
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="content" class="col-sm-1 col-xs-2 control-label"><img src="{{ url('imgs/user.svg') }}" alt=""></label>
                             <div class="col-sm-11 col-xs-10">

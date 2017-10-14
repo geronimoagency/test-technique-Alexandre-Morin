@@ -77,8 +77,27 @@
         &:focus, &:hover {
           padding-bottom: 17px;
         }
+
+        img {
+          max-height: 25px;
+        }
+
         .icon {
           @include icon(5px);
+        }
+      }
+
+      .dropdown-menu {
+        background-color: $noir;
+        >li {
+          a {
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+
+            &:focus, &:hover {
+              @include active(10px);
+            }
+          }
         }
       }
     }
@@ -91,6 +110,11 @@
 
 }
 
+.img-round {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
 /***********
     INDEX
 ***********/

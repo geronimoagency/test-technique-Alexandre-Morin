@@ -23,7 +23,16 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href=""><img src="{{ url('imgs/ic-facebook-connect.svg') }}" alt=""><span class="icon">connect with Facebook</span></a></li>
+                @if(!session()->has('user'))
+                    <li><a href="{{ url('auth/facebook') }}"><img src="{{ url('imgs/ic-facebook-connect.svg') }}" alt=""><span class="icon">Connect with Facebook</span></a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"role="button" aria-haspopup="true" aria-expanded="false"><img src="http://graph.facebook.com/{{ session('user.id') }}/picture" alt="" class="img-round"><span class="icon">{{ session('user.name') }}</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ session()->forget('user') }}">Logout</a></li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

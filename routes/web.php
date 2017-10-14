@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', 'FrontController@index');
+// Facebook Login
+Route::get('auth/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
+// Navigation
+Route::get('/', 'FrontController@index');
 Route::post('addComment', 'FrontController@addComment');
