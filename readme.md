@@ -11,8 +11,8 @@ Je me suis aussi appuyé sur le **Framework Bootstrap** en version 3.3.7 pour fa
 
 ### Installation : 
 
-	+ run *composer install*
-	+ se rendre sur <http://localhost:8000>
++ run *composer install*
++ se rendre sur <http://localhost:8000>
 
 ---
 
