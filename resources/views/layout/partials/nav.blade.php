@@ -2,7 +2,6 @@
     <div class="container-fluid">
         <div class="navbar-header">
 
-            <!-- Collapsed burger -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
@@ -10,15 +9,13 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ url('imgs/logo.svg') }}" alt="dsgn.media">
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-left">
                 <li><a href="{{ url('/') }}">Pop Culture</a></li>
                 <li><a href="{{ url('/') }}">Design</a></li>
                 <li><a href="{{ url('/') }}">Photography</a></li>

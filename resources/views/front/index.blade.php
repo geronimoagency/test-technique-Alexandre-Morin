@@ -13,7 +13,7 @@
 
         <div class="container-fluid">
             @foreach($items as $item)
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <figure>
                         <img src="{{ url($item['image']['src']) }}" srcset="{{url($item['image']['srcset'])}}" alt="" class="img-responsive center-block">
                         <figcaption>

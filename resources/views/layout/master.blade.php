@@ -45,9 +45,6 @@
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!-- GOOGLE reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <!-- ScrollUp JS -->
 <script src="{{url('assets/js/scrollUp.min.js')}}"></script>
 

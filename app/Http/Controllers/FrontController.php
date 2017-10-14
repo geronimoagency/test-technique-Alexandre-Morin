@@ -8,11 +8,11 @@ class FrontController extends Controller
 {
     public function index()
     {
-        $comments = array(
+        $comments = [
             'author' => 'CeciEstUnPseudo',
             'published_at' => 'Il y a 2 heures',
             'comment' => 'Praesent hendrerit risus in quam blandit, nec tempor nisl pharetra. Donec vitae tincidunt lorem. Curabitur maximus, mi quis tincidunt ullamcorper, massa orci pharetra purus, quis dictum lacus enim id nulla.'
-        );
+        ];
 
         $items = [
             0 => [
@@ -84,5 +84,11 @@ class FrontController extends Controller
         ];
 
         return view('front.index', compact('items'));
+    }
+
+    public function addComment(Request $request)
+    {
+        if($request->ajax())
+            return response()->json();
     }
 }

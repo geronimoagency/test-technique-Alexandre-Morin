@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'FrontController@index');
+
+Route::post('addComment', 'FrontController@addComment');

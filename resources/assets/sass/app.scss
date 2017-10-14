@@ -2,6 +2,7 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
 @import "fonts";
+
 // Helpers
 @import "helpers/variables";
 @import "helpers/mixins";
@@ -11,8 +12,9 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Style
+/********/
 
-/* scrollup */
+/* scroll to top image  */
 #scrollUp {
   bottom: 20px;
   right: 20px;
@@ -40,7 +42,7 @@
     padding-left: 60px;
   }
 
-  .navbar-nav {
+  .navbar-left {
     padding-left: 25%;
 
     > li {
@@ -67,10 +69,12 @@
       left: 0;
       right: 5%;
     }
+
     >li {
       a {
+        color: $blanc;
+
         &:focus, &:hover {
-          border: none;
           padding-bottom: 17px;
         }
         .icon {
@@ -96,19 +100,38 @@
   border-radius: 0;
 }
 
+.alert {
+  margin-top: 10px;
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+  }
+}
+
+button {
+  &.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 1;
+  }
+}
+
 header {
   img {
     width: 100%;
     object-fit: contain;
   }
+
   h1 {
-    position: absolute;
-    top: 50%;
+    position: relative;
     left: 50%;
-    transform: translate(-50%, -100%);
-    -webkit-transform: translate(-50%, -100%);
-    -moz-transform: translate(-50%, -100%);
-    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%,-350%);
+    -webkit-transform: translate(-50%, -350%);
+    -moz-transform: translate(-50%, -350%);
+    -ms-transform: translate(-50%, -350%);
     text-align: center;
     font-size: 6rem;
     font-weight: 700;
@@ -117,7 +140,7 @@ header {
 }
 
 section {
-  margin: 40px auto;
+  margin: -130px auto 40px;
 
   h2 {
     font-size: 4rem;
@@ -141,8 +164,8 @@ section {
 
       ul {
         padding-left: 0;
-        li {
 
+        li {
           display: inline-block;
           font-family: "Roboto";
           font-weight: 500;
@@ -170,7 +193,7 @@ section {
   }
 }
 
-.modal-content{
+.modal-content {
   padding: 30px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -179,10 +202,11 @@ section {
 
   .modal-header {
     border-bottom: $border-gris;
-    h3{
+
+    h3 {
       @extend %title;
     }
-    p{
+    p {
       @extend %description;
     }
   }
@@ -196,15 +220,15 @@ section {
     }
 
     .form-horizontal {
-      .control-label{
-        padding:{
+      .control-label {
+        padding: {
           top: 0;
           right: 0;
         }
         text-align: left;
       }
 
-      .form-control{
+      .form-control {
         font-family: "Roboto";
         font-size: 2rem;
         font-style: italic;
@@ -213,7 +237,7 @@ section {
         border-radius: 0;
       }
 
-      .btn-send{
+      .btn-send {
         background-color: $noir;
         color: $blanc;
         font-size: 1.6rem;
@@ -224,7 +248,7 @@ section {
       }
     }
 
-    article{
+    article {
       margin-bottom: 30px;
 
       h5 {
@@ -234,7 +258,7 @@ section {
         margin-bottom: 0;
       }
 
-      p{
+      p {
         font-family: "Roboto";
         font-size: 1.5rem;
         line-height: 2rem;
@@ -261,7 +285,7 @@ section {
   border-radius: 0;
   min-height: 40px;
 
-  ul{
+  ul {
     padding-left: 0;
     li {
       display: inline-block;
