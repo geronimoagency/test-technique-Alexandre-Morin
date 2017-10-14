@@ -1,3 +1,21 @@
+
+## Bonjour,
+
+Voici donc la production de mon test.
+
+J'ai choisi de partir du **Framework Laravel** en version 5.3 car c'est un système que je trouve assez complet et facile d'utilisation. Il s'intègre avec des packages comme *Socialite* pour la connexion via les réseaux sociaux (que j'ai implémenté avec Facebook), ou encore *Cashier* avec Braintree pour les fonctions de paiement CB / Paypal et édition de factures PDF.
+
+Je me suis aussi appuyé sur le **Framework Bootstrap** en version 3.3.7 pour facilité la version en responsive web design.
+
+---
+
+### Installation : 
+
+	+ run *composer install*
+	+ se rendre sur <http://localhost:8000>
+
+---
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -38,3 +56,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+"# test-technique-Alexandre-Morin" 
