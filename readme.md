@@ -12,6 +12,9 @@ Je me suis aussi appuyé sur le **Framework Bootstrap** en version 3.3.7 pour fa
 ### Installation : 
 
 + run *composer install*
++ ajouter dans le fichier *.env* les lignes:
+  + *FACEBOOK_APP_ID=279969899189213*
+  + *FACEBOOK_APP_SECRET=d99831bee307e9278bb3565e68196f66*
 + se rendre sur <http://localhost:8000>
 
 ---
